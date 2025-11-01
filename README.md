@@ -1,1 +1,1 @@
-# -WAD---W05-React---SumCalculator
+sum-calculator-react
