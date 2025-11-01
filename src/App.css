@@ -1,0 +1,9 @@
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #ffe6f2, #ffd9ec);
+  font-family: "Poppins", sans-serif;
+}
