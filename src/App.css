@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff8fb; 
+  font-family: "Segoe UI", sans-serif;
+}
+
+.game {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  background: #ffffff;
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(255, 182, 193, 0.3);
+}
+
+.game-board {
+  margin: 0;
+}
+
+.game-info {
+  background: #fff0f5;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ffb6c1;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+  min-width: 240px;
+}
+
+.board-wrap {
+  border: 2px solid #ffb6c1;
+  border-radius: 12px;
+  overflow: hidden; 
+  display: inline-block;
+}
+
+.board-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.board-table td {
+  padding: 0;
+  border: 2px solid #ffb6c1;
+  width: 70px;                
+  height: 70px;               
+}
+
+.square {
+  width: 110px;
+  height: 110px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 1;
+  background: #ffe4f1;
+  border: none;
+  border-radius: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff69b4;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.square:hover {
+  background: #ffd6e8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.square.highlight {
+  background: #fff0f5;
+  box-shadow: inset 0 0 0 3px #ff69b4;
+}
+
+.square:active {
+  transform: none;
+  box-shadow: none;
+  background: #ffc9dd; 
+}
+
+@media (max-width: 640px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 24px;
   }
 }
